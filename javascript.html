@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Frameworks </title>
+</head>
+
+<body>
+
+<header>
+<h1>Julius Ray Lumbao Paampag</h1>
+
+<nav>
+<ul>
+
+<li><a href="index.html">HOME</a></li>
+<li><a href="css.html">CSS</a></li>
+<li><a href="javascript.html">JAVASCRIPT</a></li>
+<li><a href="frameworks.html">FRAMEWORKS</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<article>
+
+<header>
+<h2>Introduction of JavaScript</h2>
+
+<p>Posted by <strong>Julius Ray L. Paampag</strong></p>
+
+</header>
+
+<h3>What is JavaScript?</h3>
+
+<p>
+	JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (<a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>) we have covered in much more detail in other parts of the Learning Area.
+</p>
+
+<h4>History of JavaScript</h4>
+
+<p>
+		JavaScript was created in May 1995 by Brendan Eich while working at Netscape Communications Corporation. Remarkably, he designed and implemented the first version of the language in just 10 days. Initially developed under the codename Mocha, it was briefly renamed LiveScript before officially launching as JavaScript in Netscape Navigator 2.0. The name was a strategic marketing move to capitalize on the massive popularity of Sun Microsystems' Java language, despite the two languages having entirely different underlying architectures.
+	</p>
+
+<h4>The Browser Wars and Standardization (1996–1999)</h4>
+
+<ul>
+		<li>
+			 In 1996, Microsoft reverse-engineered JavaScript to create a compatible version named JScript for Internet Explorer 3.
+		</li>
+		<li>
+			Language Fragmentation: The slight differences between JavaScript and JScript forced developers to write separate code blocks for different browsers
+		</li>
+		<li>
+			ECMAScript Birth: To fix this division, Netscape submitted the language to ECMA International. In 1997, the official standard ECMAScript (ECMA-262) was born
+		</li>
+		<li>
+			Early Stability: The release of ECMAScript 3 in 1999 established a reliable baseline feature set that powered the web for the next ten years.
+		</li>
+	</ul>
+
+<h4>Key Reasons to Use JavaScript</h4>
+
+<ul>
+		<li>
+			<p>
+				Website Interactivity: It enables real-time updates without reloading the entire page. Examples include interactive dropdown menus, form validations, search box suggestions, and animations
+			</p>
+		</li>
+		<li>
+			<p>
+				Client-Side Processing: Because code runs directly inside the user's browser, execution is incredibly fast. This reduces latency and puts less burden on external servers
+			</p>
+		</li>
+		<li>
+			<p>
+				Full-Stack Development: With the creation of Node.js, you can use a single language to write both front-end (user interface) and back-end (server/database) code.
+			</p>
+		</li>
+		<li>
+			<p>
+				Cross-Platform Versatility: Using frameworks like React Native, Electron, and Phaser, you can build mobile apps, desktop software, and full-scale 2D or 3D video games using JavaScript
+			</p>
+		</li>
+		<li>
+			<p>
+				Massive Ecosystem: It offers a vast ecosystem of libraries and pre-built code frameworks like React, Vue, and Angular, which drastically speeds up development time
+			</p>
+		</li>
+		<li>
+			<p>
+				Beginner-Friendly: It features a highly accessible syntax, dynamic typing, and immediate feedback. You only need a standard text editor and a browser to start coding
+			</p>
+		</li>
+	</ul>
+
+	<h4>So what can it really do?</h4>
+
+	<p>
+		The core client-side JavaScript language consists of some common programming features that allow you to do things like:
+	</p>
+	<ul>
+		<li>
+			Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.
+		</li>
+		<li>
+			Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the name variable to create the complete text label, e.g., "Player 1: Chris".
+		</li>
+		<li>
+			Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the button is clicked and then run the code that updates the text label.
+		</li>
+		<li>
+			And much more!
+		</li>
+	</ul>
+	<p>
+		What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.
+	</p>
+	<p>
+		APIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf.
+	</p>
+
+	<h4>JavaScript running order</h4>
+
+	<p>
+		When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom. This means that you need to be careful what order you put things in. For example, let's return to the block of JavaScript we saw in our first example:
+	</p>
+	<p>
+		<img src="images/image6.png">
+	</p>
+
+	<p>
+		Here, we first define a code block called updateName() (these types of reusable code blocks are called functions), which asks the user for a new name and inserts that name into the text of a button. We then store a reference to a button using document.querySelector and attach an event listener to it using addEventListener so that when the button is clicked, the updateName() function is run.
+	</p>
+	<p>
+		If you were to swap the order of the const button = ... and button.addEventListener(...) lines, the code would no longer work — instead, you'd get an error returned in the browser developer console — Uncaught ReferenceError: Cannot access 'button' before initialization. This means that the button object has not been initialized yet, so we can't add an event listener to it.
+	</p>
+	<p>
+		Note: It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like <a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">hoisting</a>, but for now, bear in mind that generally items need to be defined before you can use them. This is a common source of errors.
+	</p>
+	
+
+
+	<p>
+		By doing a lot of practice, you will definitely experience errors and bugs in your code, but don'tworry, you will overcome them all!
+	</p>
+
+
+
+<p>
+	By doing a lot of practice, you will definitely experience errors and bugs in your code, but don't worry, you will overcome them all!
+</p>
+
+<h3>Want More?</h3>
+
+		<p> <a href="https://learntechnologytoday.net/">Join Us:</a></p>
+
+		<p> <a href="https://www.facebook.com/LearnTechnologyToday">Facebook:</a></p>
+
+<h3>Subscribe to Our Newsletter</h3>
+
+<form>
+
+<input type="email" name="email" placeholder="Your Email Address" required>
+<input type="submit" value="Subscribe">
+
+</form>
+
+</article>
+
+<aside>
+<h4>Related posts</h4>
+
+<ul>
+
+<li>
+<h4><a href="css.html">What is CSS?</a></h4>
+<p>By Julius Ray Lumbao Paampag</p>
+</li>
+
+<li>
+<h4><a href="javascript.html">What is JavaScript?</a></h4>
+<p>By Julius Ray Lumbao Paampag</p>
+</li>
+
+<li>
+<h4><a href="frameworks.html">What is a Web Framework?</a></h4>
+<p>By Julius Ray Lumbao Paampag</p>
+</li>
+
+</ul>
+</aside>
+
+<footer>
+	Copyright &copy; 2030 by Julius Ray Lumbao Paampag All Rights Reserved.
+</footer>
+
+</body>
+
+</html>
